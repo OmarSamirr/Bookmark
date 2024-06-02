@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container-fluid py-2 position-relative">
+      <div id="popup"  class="popup d-none">
+        <div class="window container rounded">
+          <header class="d-flex justify-content-between align-items-baseline">
+            <div class="colors d-inline-block mt-4 px-3">
+              <span class="red bg-danger"></span>
+              <span class="yellow bg-warning"></span>
+              <span class="green bg-success"></span>
+            </div>
+            <button onclick="removePopup()" class="mt-4 mx-3">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </header>
+          <p class="mt-4 mx-3">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <li class="mt-4 mx-3">
+            <i class="fa-regular fa-circle-right text-danger mx-2"></i>Site name
+            must contain at least 3 characters
+          </li>
+          <li class="my-4 mx-3">
+            <i class="fa-regular fa-circle-right text-danger mx-2"></i>Site URL
+            must be a valid one
+          </li>
+        </div>
+      </div>
+      <h1 class="text-center mt-5">Bookmarker</h1>
+      <div class="main container text-center px-4 py-3 mb-4">
+        <h2 class="mt-2 mb-4">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favourite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <label class="w-100 text-start my-2" for="siteName"
+          ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+        >
+        <input
+          oninput="validate(this)"
+          type="text"
+          id="siteName"
+          placeholder="Bookmark Name"
+          class="form-control mb-3"
+        />
+        <label class="w-100 text-start my-2" for="siteLink"
+          ><i class="fa-solid fa-link"></i> Site URL</label
+        >
+        <input
+        oninput="validate(this)"
+          type="text"
+          id="siteLink"
+          placeholder="Website URL"
+          class="form-control mb-3"
+        />
+        <button onclick="addBookmark()" class="submit btn px-4 py-2 my-3">
+          Add Bookmark
+        </button>
+      </div>
+      <div class="container">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableData"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="JS/index.js"></script>
+  </body>
+</html>

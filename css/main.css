@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Pacifico;
+  src: url(../Fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: Righteous;
+  src: url(../Fonts/Righteous/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url(../Fonts/PT_Sans_Caption/PTSansCaption-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url(../Fonts/PT_Sans_Caption/PTSansCaption-Regular.ttf);
+  font-weight: 400;
+}
+
+:root {
+  --maincolor: #fec260;
+}
+*::selection {
+  background-color: var(--maincolor);
+}
+
+body {
+  background-color: #f7ecde;
+}
+
+.main {
+  border-top: #000 2px dotted;
+  border-bottom: #000 2px dotted;
+  margin-top: 60px;
+}
+button.submit {
+  background-color: #d1512d;
+  color: #fff;
+  border-radius: 5px;
+  font-family: "PT Sans Caption";
+  font-weight: 400;
+  transition: 0.2s;
+}
+button.submit:hover {
+  background-color: #bb4120;
+}
+h1 {
+  color: #352e28;
+  font-size: 50px;
+  font-family: "Pacifico";
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 2px;
+  height: 30%;
+  background-color: var(--maincolor);
+  z-index: -1;
+  transition: all 0.3s;
+}
+h1:hover::before {
+  height: 60%;
+}
+
+h2 {
+  font-family: "Righteous";
+  font-size: 25px;
+  color: transparent;
+  width: fit-content;
+  margin: auto;
+  background-image: linear-gradient(to right, #3da55b, #b2ab49);
+  background-clip: text;
+}
+input {
+  font-family: "PT Sans Caption";
+  font-weight: 400;
+}
+label {
+  font-family: "PT Sans Caption";
+  font-weight: 700;
+}
+.form-control:focus {
+  border-color: var(--maincolor);
+  box-shadow: 0 0 0 0.25rem #fadeb4;
+}
+.delete {
+  background-color: #e51831;
+  transition: 0.2s;
+  color: white;
+  font-family: "PT Sans Caption";
+}
+.delete:hover {
+  background-color: #d30820;
+  color: white;
+}
+.visit {
+  background-color: #9eb23b;
+  transition: 0.2s;
+  color: white;
+  font-family: "PT Sans Caption";
+}
+.visit:hover {
+  background-color: #8a9e23;
+  color: white;
+}
+.popup {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* align-items: center;
+  justify-content: center; */
+}
+.window {
+  width: 500px;
+  height: fit-content;
+  top: 200px;
+  position: relative;
+  background-color: white;
+}
+.colors span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px;
+}
+.window button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  font-weight: 900;
+}
+.window li {
+  font-family: "PT Sans Caption";
+  font-size: 18px;
+  list-style-type: none;
+}
+.window p {
+  font-family: "PT Sans Caption";
+  font-size: 21px;
+  font-weight: 900;
+}
